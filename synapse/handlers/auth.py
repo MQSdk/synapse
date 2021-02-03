@@ -1486,6 +1486,8 @@ class AuthHandler(BaseHandler):
                 (url_parts.scheme, url_parts.netloc, url_parts.path, "", "")
             )
 
+        assert self._sso_redirect_confirm_template is not None
+
         html = self._sso_redirect_confirm_template.render(
             display_url=display_url,
             redirect_url=redirect_url,
