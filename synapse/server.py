@@ -630,8 +630,7 @@ class HomeServer(metaclass=abc.ABCMeta):
 
     @cache_in_self
     def get_user_directory_search_module(
-        self,
-        database_engine_type,
+        self, database_engine_type,
     ) -> UserDirectorySearchModule:
         return UserDirectorySearchModule(self, database_engine_type)
 
